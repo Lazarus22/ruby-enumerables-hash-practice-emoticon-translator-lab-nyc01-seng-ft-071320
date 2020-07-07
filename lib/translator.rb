@@ -12,7 +12,6 @@ def load_library(file)
     end
     result
   end
-
 end
 
 def get_english_meaning(file, j_emoticon)
@@ -33,10 +32,9 @@ def get_english_meaning(file, j_emoticon)
 end
 
 
-def get_japanese_emoticon(yaml_file, eng_emoti)
-  # code goes here
+def get_japanese_emoticon(file, eng_emoti)
   translation = ""
-  new_hash = load_library(yaml_file)
+  new_hash = load_library(file)
   new_hash.each do |name, languages|
       if languages[:english] == eng_emoti
       translation = languages[:japanese]
